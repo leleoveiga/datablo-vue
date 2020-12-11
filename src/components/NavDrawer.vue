@@ -1,13 +1,11 @@
 <template>
 	<v-navigation-drawer permanent app clipped right dark>
-		<v-list dense nav>
+		<v-list nav>
 			<v-list-item v-for="item in items" :key="item.title" link>
-				<v-list-item-icon>
-					<v-icon>{{ item.icon }}</v-icon>
-				</v-list-item-icon>
-
-				<v-list-item-content>
-					<v-list-item-title>{{ item.title }}</v-list-item-title>
+				<v-list-item-content class="pa-3">
+					<h3 class="font-weight-medium d-flex align-self-center">
+						{{ item.title }}
+					</h3>
 				</v-list-item-content>
 			</v-list-item>
 		</v-list>
@@ -19,9 +17,9 @@ export default {
 	name: "NavDrawer",
 	data: () => ({
 		items: [
-			{ title: "Dashboard", icon: "mdi-view-dashboard" },
-			{ title: "Photos", icon: "mdi-image" },
-			{ title: "About", icon: "mdi-help-box" },
+			{ title: "Overview", icon: "mdi-view-dashboard" },
+			{ title: "Perfil do aluno", icon: "mdi-image" },
+			{ title: "Sobre RAE", icon: "mdi-help-box" },
 		],
 		right: null,
 	}),
