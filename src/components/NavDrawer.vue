@@ -1,14 +1,19 @@
 <template>
-	<v-navigation-drawer permanent app clipped right dark>
-		<v-list nav>
-			<v-list-item v-for="item in items" :key="item.title" link>
-				<v-list-item-content class="pa-3">
-					<h3 class="font-weight-medium d-flex align-self-center">
-						{{ item.title }}
-					</h3>
-				</v-list-item-content>
-			</v-list-item>
-		</v-list>
+	<v-navigation-drawer class="pt-4" permanent app clipped right color="#1c1f23">
+		<v-treeview
+			v-model="tree"
+			:open="initiallyOpen"
+			:items="items"
+			activatable
+			item-key="name"
+			open-on-click
+		>
+			<template v-slot:label="{ item }">
+				<h3 class="grey--text text--lighten-4 font-weight-light">
+					{{ item.name }}
+				</h3>
+			</template>
+		</v-treeview>
 	</v-navigation-drawer>
 </template>
 
@@ -17,9 +22,9 @@ export default {
 	name: "NavDrawer",
 	data: () => ({
 		items: [
-			{ title: "Overview", icon: "mdi-view-dashboard" },
-			{ title: "Perfil do aluno", icon: "mdi-image" },
-			{ title: "Sobre RAE", icon: "mdi-help-box" },
+			{ name: "Overview" },
+			{ name: "Perfil do aluno" },
+			{ name: "Sobre RAE" },
 		],
 		right: null,
 	}),
