@@ -16,13 +16,15 @@
 		<v-treeview
 			v-model="tree"
 			:items="items"
-			activatable
 			item-key="name"
 			transition
 			open-on-click
 		>
 			<template v-slot:label="{ item }">
-				<span class="navFont grey--text text--lighten-4 font-weight-regular">
+				<span
+					v-bind:class="{ childrenFont: item.child }"
+					class="navFont grey--text text--lighten-4 font-weight-regular"
+				>
 					{{ item.name }}
 				</span>
 			</template>
@@ -41,6 +43,7 @@ export default {
 				children: [
 					{
 						name: "Quantidade de respostas",
+						child: true,
 					},
 				],
 			},
@@ -54,6 +57,10 @@ export default {
 <style>
 .navFont {
 	font-family: "Roboto Slab", serif;
-	font-size: 21px;
+	font-size: 22px;
+}
+.childrenFont {
+	font-family: "Roboto Slab", serif;
+	font-size: 16px;
 }
 </style>
