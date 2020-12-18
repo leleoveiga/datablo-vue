@@ -5,6 +5,82 @@
 		height="100%"
 		tile
 	>
+		<!-- Template dos textos
+		<div class="textGraphs">
+			<p class="p1 grey--text text--lighten-4"></p>
+		</div>
+		-->
+		<div style="width: 90%">
+			<p class="titlePage grey--text text--lighten-4">
+				Resultados da consulta de opinião pública da comunidade acadêmica de
+				graduação da UFCG a respeito do Regime Acadêmico Extraordinário - RAE
+			</p>
+			<!-- <div class="d-flex justify-start"> -->
+			<v-btn class="px-10 mb-16" color="#eead2dcc">Metodologia</v-btn>
+			<div class="presentation">
+				<div class="text">
+					<p class=" grey--text text--lighten-4">
+						Ao longo do Regime Acadêmico Extraordinário (RAE) da UFCG, ouvimos
+						diversas queixas e comentários de alunos sobre os mais variados
+						aspectos, desde a falta de vagas até a baixa qualidade do ensino em
+						algumas disciplinas. Apesar de serem pertinentes, nos demos conta de
+						que, naturalmente, as opiniões que nos atingem são, frequentemente,
+						reflexos da "bolha" social em que nos encontramos. Nasceu aí o
+						questionamento, será que os estudantes de outros campi ou de outros
+						cursos passam por essas mesmas situações? Será a nossa realidade
+						compartilhada pelos outros graduandos?
+					</p>
+					<p class=" grey--text text--lighten-4">
+						Para conseguir essas respostas, nós fizemos o que qualquer bom
+						estudante faz diariamente: Perguntar. Assim começou a nossa jornada,
+						cheia de pedras pelo caminho, e o resultado é o que vocês
+						encontrarão a seguir. Infelizmente, ao longo do desenvolvimento,
+						encontramos diversos pontos fracos que certamente serão reforçados
+						em atividades futuras. Não há problema algum em cometer erros, desde
+						que eles sejam usados como degraus para o progresso, certo?
+					</p>
+					<p class=" grey--text text--lighten-4">
+						Também gostaríamos de dizer que esta pesquisa de opinião foi
+						desenvolvida por estudantes e para estudantes, com o objetivo de dar
+						voz à comunidade acadêmica de graduação, que raramente tem seus
+						anseios e opiniões ouvidos. Por isso, esperamos que esta seja a
+						primeira de muitas e que vocês encontrem aqui um ambiente de
+						representatividade.
+					</p>
+					<p class=" grey--text text--lighten-4">
+						Por fim, deixamos registrado o agradecimento à Assessoria de
+						Comunicação da UFCG, que nos ajudou a divulgar o projeto, elevando o
+						número de respondentes a níveis aceitáveis. Agradecemos também aos
+						CAs e às diversas coordenações, que repassaram nosso formulário aos
+						estudantes, e aos prórios alunos, que tiveram a boa vontade de
+						opinar. Sem vocês nada teria sido possível.
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- </div> -->
+		<!-- <v-btn>Github</v-btn> -->
+
+		<strong class="mt-16" style="font-size: 2em"
+			>Perfil dos Respondentes</strong
+		>
+		<div class="textGraphs">
+			<p class="p1 grey--text text--lighten-4">
+				Ao todo, 1567 estudantes, o que corresponde a pouco menos de 10% do
+				total de alunos de graduação da UFCG, responderam à pesquisa de opinião
+				ao longo de duas semanas, dos quais a maior parte são dos campi de
+				Campina Grande, Cuité e Cajazeiras, que juntos representam mais de 75%
+				dos respondentes.
+			</p>
+			<p class="p1 grey--text text--lighten-4">
+				Além disso, é notável que a grande maioria dos participantes se
+				encontram nos períodos iniciais de seus cursos. Cerca de 43% deles ainda
+				não chegaram no 4º período letivo. Percebe-se, com isso, que o
+				engajamento nesta consulta tende a ser consideravelmente menor entre os
+				estudantes mais veteranos.
+			</p>
+		</div>
+		<!-- card dos gráficos -->
 		<v-card class="marginGraph" width="90%" dark>
 			<div
 				class="font-weight-bold body-1 d-flex align-center justify-center mt-10"
