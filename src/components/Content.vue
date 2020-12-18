@@ -6,6 +6,7 @@
 		tile
 	>
 		<!-- Template dos textos
+		<strong class="mt-16" style="font-size: 2em"></strong>
 		<div class="textGraphs">
 			<p class="p1 grey--text text--lighten-4"></p>
 		</div>
@@ -111,7 +112,7 @@
 				>
 			</div>
 			<!-- <v-expand-transition> -->
-			<Quantidade
+			<QuantidadeGeral
 				v-if="tipoGraficoQuantidade === 0"
 				class="mt-n5"
 				height="1750"
@@ -132,21 +133,44 @@
 			<!-- </v-expand-transition> -->
 		</v-card>
 
+		<strong class="mt-16" style="font-size: 2em">Sobre o RAE</strong>
+
 		<div class="textGraphs">
-			<p class="p1 grey--text text--lighten-4"></p>
+			<p class="p1 grey--text text--lighten-4">
+				Depois de questionados sobre diversos aspectos do RAE (Regime Acadêmico
+				Extraordinário), fica aparente a baixa popularidade do mesmo entre os
+				estudantes de graduação. Quando perguntada diretamente, por exemplo, sua
+				opinião geral sobre o sistema, 41% o classificaram como ruim ou péssimo
+				em contraste aos 21% que declararam opinião positiva.
+			</p>
+			<p class="p1 grey--text text--lighten-4">
+				Em questões mais específicas, a impopularidade do regime fica ainda mais
+				evidente: 71% dos respondentes avaliam a qualidade do ensino como pior,
+				em relação ao presencial. Além disso, 91% dos consultados declararam ter
+				tido, ao menos uma vez, algum tipo de problema técnico que dificultou ou
+				inviabilizou a realização de atividades nesse período. Destes, 79% dizem
+				ter seu desempenho afetado por esses imprevistos.
+			</p>
 		</div>
+
+		<!-- <VagasGeral
+			v-else-if="tipoGraficoQuantidade === 2"
+			class="mt-n5"
+			height="380"
+			width="900"
+		/> -->
 	</v-card>
 </template>
 
 <script>
-import Quantidade from "./graphs/Quantidade";
-import QuantidadePorCurso from "./graphs/QuantidadePorCurso";
-import QuantidadePorCampus from "./graphs/QuantidadePorCampus";
+import QuantidadeGeral from "./graphs/quantidade/QuantidadeGeral";
+import QuantidadePorCurso from "./graphs/quantidade/QuantidadePorCurso";
+import QuantidadePorCampus from "./graphs/quantidade/QuantidadePorCampus";
 
 export default {
 	name: "Content",
 	components: {
-		Quantidade,
+		QuantidadeGeral,
 		QuantidadePorCurso,
 		QuantidadePorCampus,
 	},
@@ -187,7 +211,7 @@ export default {
 }
 
 .textGraphs {
-	margin-top: 40px;
+	margin-top: 50px;
 	width: 85%;
 	max-height: 520px;
 	-webkit-column-count: 2;
