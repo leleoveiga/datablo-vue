@@ -17,6 +17,9 @@
 			v-model="tree"
 			:items="items"
 			item-key="name"
+			activatable
+			color="#eead2d"
+			expand-icon=""
 			transition
 			open-on-click
 		>
