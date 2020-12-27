@@ -25,11 +25,6 @@ export default {
 </script>
 
 <style>
-html {
-	--scrollbarBG: #1f1f1f;
-	--thumbBG: #4a4a4a;
-}
-
 body::-webkit-scrollbar {
 	width: 16px;
 }
@@ -39,9 +34,9 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-	background-color: var(--thumbBG);
+	background-color: #4a4a4a;
 	border-radius: 0px;
-	border: 0px solid var(--scrollbarBG);
+	border: 0px solid #1f1f1f;
 }
 
 body::-webkit-scrollbar-thumb:hover {
