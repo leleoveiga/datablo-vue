@@ -87,6 +87,7 @@
 		<QualidadeRAE />
 		<SaudeMental />
 		<DificuldadesTecnicas />
+		<DificuldadesDesempenho />
 	</v-card>
 </template>
 
@@ -98,12 +99,14 @@ import OpiniaoRAE from "./pages/SobreRae/OpiniaoRAE.vue";
 import DesempenhoRAE from "./pages/SobreRae/DesempenhoRAE.vue";
 import QualidadeRAE from "./pages/SobreRae/QualidadeRAE.vue";
 import SaudeMental from "./pages/SobreRae/SaudeMental.vue";
+import DificuldadesDesempenho from "./pages/SobreRae/DificuldadesDesempenho.vue";
 import DificuldadesTecnicas from "./pages/SobreRae/DificuldadesTecnicas.vue";
 
 export default {
 	name: "Content",
 	components: {
 		DificuldadesTecnicas,
+		DificuldadesDesempenho,
 		SaudeMental,
 		QualidadeRAE,
 		DesempenhoRAE,
