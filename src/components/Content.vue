@@ -7,9 +7,26 @@
 	>
 		<!-- Template dos textos
 		<strong class="mt-16" style="font-size: 2em"></strong>
+
 		<div class="textGraphs">
 			<p class="p1 grey--text text--lighten-4"></p>
 		</div>
+
+		<v-card class="marginGraph" width="90%" dark>
+			<div
+				class="font-weight-bold body-1 d-flex align-center justify-center mt-10"
+			>
+				Texto do gráfico
+			</div>
+
+			<div class="d-flex align-center justify-center mt-10">
+				<v-btn>Botoes</v-btn>
+				<v-btn>Botoes</v-btn>
+			</div>
+
+			<Charts/>
+
+		</v-card>
 		-->
 		<div style="width: 90%">
 			<p class="titlePage grey--text text--lighten-4">
@@ -63,25 +80,40 @@
 		<!-- <v-btn>Github</v-btn> -->
 
 		<PerfilRespondentes />
-		<SobreRae />
+		<VagasOfertadas />
+		<CursarDisciplina />
+		<OpiniaoRAE />
+		<DesempenhoRAE />
+		<QualidadeRAE />
+		<SaudeMental />
+		<DificuldadesTecnicas />
 	</v-card>
 </template>
 
 <script>
 import PerfilRespondentes from "./pages/PerfilRespondentes";
-import SobreRae from "./pages/SobreRae.vue";
+import VagasOfertadas from "./pages/SobreRae/VagasOfertadas.vue";
+import CursarDisciplina from "./pages/SobreRae/CursarDisciplina.vue";
+import OpiniaoRAE from "./pages/SobreRae/OpiniaoRAE.vue";
+import DesempenhoRAE from "./pages/SobreRae/DesempenhoRAE.vue";
+import QualidadeRAE from "./pages/SobreRae/QualidadeRAE.vue";
+import SaudeMental from "./pages/SobreRae/SaudeMental.vue";
+import DificuldadesTecnicas from "./pages/SobreRae/DificuldadesTecnicas.vue";
 
 export default {
 	name: "Content",
 	components: {
+		DificuldadesTecnicas,
+		SaudeMental,
+		QualidadeRAE,
+		DesempenhoRAE,
+		OpiniaoRAE,
+		CursarDisciplina,
 		PerfilRespondentes,
-		SobreRae,
+		VagasOfertadas,
 	},
 	data: function() {
-		return {
-			tipoGraficoQuantidade: 0,
-			tipoGraficoVagas: 0,
-		};
+		return {};
 	},
 };
 </script>

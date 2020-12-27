@@ -74,9 +74,9 @@
 </template>
 
 <script>
-import QuantidadeGeral from "../graphs/quantidade/QuantidadeGeral";
-import QuantidadePorCurso from "../graphs/quantidade/QuantidadePorCurso";
-import QuantidadePorCampus from "../graphs/quantidade/QuantidadePorCampus";
+import QuantidadeGeral from "../charts/quantidade/QuantidadeGeral";
+import QuantidadePorCurso from "../charts/quantidade/QuantidadePorCurso";
+import QuantidadePorCampus from "../charts/quantidade/QuantidadePorCampus";
 
 export default {
 	name: "PerfilRespondentes",
