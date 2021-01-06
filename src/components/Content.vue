@@ -93,6 +93,8 @@
 		<AtuacaoProfessores />
 		<AtendimentoProfessores />
 		<ExigenciaProfessores />
+		<VolumeAtividades />
+		<JulgaVolumeAtividades />
 	</v-card>
 </template>
 
@@ -111,12 +113,16 @@ import ProfessoresTolerantes from "./pages/SobreProfessores/ProfessoresTolerante
 import AtuacaoProfessores from "./pages/SobreProfessores/AtuacaoProfessores";
 import ExigenciaProfessores from "./pages/SobreProfessores/ExigenciaProfessores";
 import AtendimentoProfessores from "./pages/SobreProfessores/AtendimentoProfessores";
+import VolumeAtividades from "./pages/SobreProfessores/VolumeAtividades";
+import JulgaVolumeAtividades from "./pages/SobreProfessores/JulgaVolumeAtividades";
 
 export default {
 	name: "Content",
 	components: {
-		ExigenciaProfessores,
+		JulgaVolumeAtividades,
+		VolumeAtividades,
 		AtendimentoProfessores,
+		ExigenciaProfessores,
 		AtuacaoProfessores,
 		ProfessoresTolerantes,
 		SobreProfessores,
