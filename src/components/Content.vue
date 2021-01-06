@@ -12,7 +12,7 @@
 			<p class="p1 grey--text text--lighten-4"></p>
 		</div>
 
-		<v-card class="marginGraph" width="90%" dark>
+		<v-card class="mt-10" width="90%" dark>
 			<div
 				class="font-weight-bold body-1 d-flex align-center justify-center mt-10"
 			>
@@ -20,8 +20,8 @@
 			</div>
 
 			<div class="d-flex align-center justify-center mt-10">
-				<v-btn>Botoes</v-btn>
-				<v-btn>Botoes</v-btn>
+				<v-btn class="mx-3" color="#eead2dcc" light @click="tipoGrafico = 0">Botoes</v-btn>
+				<v-btn class="mx-3" color="#eead2dcc" light @click="tipoGrafico = 1">Botoes</v-btn>
 			</div>
 
 			<Charts/>
@@ -88,6 +88,11 @@
 		<SaudeMental />
 		<DificuldadesTecnicas />
 		<DificuldadesDesempenho />
+		<SobreProfessores />
+		<ProfessoresTolerantes />
+		<AtuacaoProfessores />
+		<AtendimentoProfessores />
+		<ExigenciaProfessores />
 	</v-card>
 </template>
 
@@ -101,10 +106,20 @@ import QualidadeRAE from "./pages/SobreRae/QualidadeRAE.vue";
 import SaudeMental from "./pages/SobreRae/SaudeMental.vue";
 import DificuldadesDesempenho from "./pages/SobreRae/DificuldadesDesempenho.vue";
 import DificuldadesTecnicas from "./pages/SobreRae/DificuldadesTecnicas.vue";
+import SobreProfessores from "./pages/SobreProfessores/SobreProfessores";
+import ProfessoresTolerantes from "./pages/SobreProfessores/ProfessoresTolerantes";
+import AtuacaoProfessores from "./pages/SobreProfessores/AtuacaoProfessores";
+import ExigenciaProfessores from "./pages/SobreProfessores/ExigenciaProfessores";
+import AtendimentoProfessores from "./pages/SobreProfessores/AtendimentoProfessores";
 
 export default {
 	name: "Content",
 	components: {
+		ExigenciaProfessores,
+		AtendimentoProfessores,
+		AtuacaoProfessores,
+		ProfessoresTolerantes,
+		SobreProfessores,
 		DificuldadesTecnicas,
 		DificuldadesDesempenho,
 		SaudeMental,
