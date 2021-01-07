@@ -22,6 +22,7 @@
 				<span
 					v-bind:class="{ childrenFont: item.child }"
 					class="navFont grey--text text--lighten-4 font-weight-regular"
+					@click="scrollTo(item.id)"
 				>
 					{{ item.name }}
 				</span>
@@ -45,10 +46,19 @@ export default {
 					},
 				],
 			},
-			{ name: "Sobre RAE" },
+			{ name: "Sobre RAE", id: "sobreRae" },
 		],
 		right: null,
 	}),
+	methods: {
+		scrollTo(id) {
+			this.$vuetify.goTo(`#${id}`, {
+				duration: 200,
+				offset: 0,
+				easing: "easeInOutCubic",
+			});
+		},
+	},
 };
 </script>
 
