@@ -6,11 +6,15 @@
 		tile
 	>
 		<!-- Template dos textos
-		<strong class="mt-16" style="font-size: 2em"></strong>
+		<div class="d-flex flex-column align-center mt-1">
+			<strong class="mt-16" style="font-size: 2em"></strong>
 
-		<div class="textGraphs">
-			<p class="p1 grey--text text--lighten-4"></p>
+			<div class="textGraphs">
+				<p class="p1 grey--text text--lighten-4"></p>
+			</div>
 		</div>
+
+		Gráficos
 
 		<v-card class="mt-10" width="90%" dark>
 			<div
@@ -95,6 +99,7 @@
 		<ExigenciaProfessores />
 		<VolumeAtividades />
 		<JulgaVolumeAtividades />
+		<SobreInstituicao />
 	</v-card>
 </template>
 
@@ -115,10 +120,12 @@ import ExigenciaProfessores from "./pages/SobreProfessores/ExigenciaProfessores"
 import AtendimentoProfessores from "./pages/SobreProfessores/AtendimentoProfessores";
 import VolumeAtividades from "./pages/SobreProfessores/VolumeAtividades";
 import JulgaVolumeAtividades from "./pages/SobreProfessores/JulgaVolumeAtividades";
+import SobreInstituicao from "./pages/SobreInstituicao/SobreInstituicao";
 
 export default {
 	name: "Content",
 	components: {
+		SobreInstituicao,
 		JulgaVolumeAtividades,
 		VolumeAtividades,
 		AtendimentoProfessores,
@@ -174,7 +181,7 @@ export default {
 	margin-top: 50px;
 	width: 85%;
 	max-height: 520px;
-	-webkit-column-count: 2;
+	/* -webkit-column-count: 2; */
 	column-count: 2;
 	grid-column-gap: 20px;
 	-webkit-column-gap: 20px;
@@ -182,6 +189,16 @@ export default {
 	font-size: 1.2rem;
 	line-height: 26px;
 }
+
+.avaliacao_cursos {
+	color: #e6e7ea !important;
+	font-size: 0.9rem;
+	font-family: "Roboto", sans-serif;
+	color: var(--text-color);
+	line-height: 23px;
+	column-count: 2;
+}
+
 strong {
 	color: #eead2d;
 }
