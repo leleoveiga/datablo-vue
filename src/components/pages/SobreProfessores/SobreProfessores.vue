@@ -14,10 +14,16 @@
 				respondentes), pedindo um volume de atividades mais alto que o normal,
 				dito abusivo por 52% dos alunos, os professores gozam de uma boa
 				avaliação geral, tendo opiniões positivas de 42% dos que responderam à
-				pesquisa. Vale destacar os cursos que melhor avaliaram seus professores:
-				Enfermagem, Matemática, História, Design e Ciência da Computação. E os
-				que pior avaliaram: Direito, Química, Medicina, Engenharia Elétrica e
-				Ciências Biológicas
+				pesquisa.<br />Vale destacar os cursos que melhor avaliaram seus
+				professores:
+				<strong
+					>Enfermagem, Matemática, História, Design e Ciência da
+					Computação.</strong
+				><br />E os que pior avaliaram:
+				<strong
+					>Direito, Química, Medicina, Engenharia Elétrica e Ciências
+					Biológicas</strong
+				>
 			</p>
 		</div>
 	</div>
