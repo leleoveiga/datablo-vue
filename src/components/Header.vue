@@ -8,7 +8,11 @@
 
 		<v-spacer></v-spacer>
 
-		<v-btn href="https://github.com/leleoveiga" target="_blank" text>
+		<v-btn
+			href="https://github.com/leleoveiga/datablo-vue"
+			target="_blank"
+			text
+		>
 			<span class="mr-2">github</span>
 			<v-icon>mdi-open-in-new</v-icon>
 		</v-btn>
