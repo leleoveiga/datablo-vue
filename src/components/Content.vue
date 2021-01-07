@@ -32,8 +32,17 @@
 
 		</v-card>
 		-->
-		<div style="width: 90%">
-			<p class="titlePage grey--text text--lighten-4">
+		<div
+			class="grey--text text--lighten-4"
+			style="width: 90%; margin-top: 200px;"
+		>
+			<h1
+				class="ml-n2"
+				style="font-size: 2.5rem; text-shadow: 2px 2px 3px #000;"
+			>
+				<v-icon color="#eead2d" size="72">mdi-database</v-icon> Consulta RAE
+			</h1>
+			<p class="titlePage">
 				Resultados da consulta de opinião pública da comunidade acadêmica de
 				graduação da UFCG a respeito do Regime Acadêmico Extraordinário - RAE
 			</p>
@@ -41,7 +50,7 @@
 			<v-btn class="px-10 mb-16" color="#eead2dcc">Metodologia</v-btn>
 			<div class="presentation">
 				<div class="text">
-					<p class=" grey--text text--lighten-4">
+					<p class="">
 						Ao longo do Regime Acadêmico Extraordinário (RAE) da UFCG, ouvimos
 						diversas queixas e comentários de alunos sobre os mais variados
 						aspectos, desde a falta de vagas até a baixa qualidade do ensino em
@@ -52,16 +61,17 @@
 						cursos passam por essas mesmas situações? Será a nossa realidade
 						compartilhada pelos outros graduandos?
 					</p>
-					<p class=" grey--text text--lighten-4">
+					<p class="">
 						Para conseguir essas respostas, nós fizemos o que qualquer bom
-						estudante faz diariamente: Perguntar. Assim começou a nossa jornada,
-						cheia de pedras pelo caminho, e o resultado é o que vocês
-						encontrarão a seguir. Infelizmente, ao longo do desenvolvimento,
-						encontramos diversos pontos fracos que certamente serão reforçados
-						em atividades futuras. Não há problema algum em cometer erros, desde
-						que eles sejam usados como degraus para o progresso, certo?
+						estudante faz diariamente:<strong> Perguntar</strong>. Assim começou
+						a nossa jornada, cheia de pedras pelo caminho, e o resultado é o que
+						vocês encontrarão a seguir. Infelizmente, ao longo do
+						desenvolvimento, encontramos diversos pontos fracos que certamente
+						serão reforçados em atividades futuras. Não há problema algum em
+						cometer erros, desde que eles sejam usados como degraus para o
+						progresso, certo?
 					</p>
-					<p class=" grey--text text--lighten-4">
+					<p class="">
 						Também gostaríamos de dizer que esta pesquisa de opinião foi
 						desenvolvida por estudantes e para estudantes, com o objetivo de dar
 						voz à comunidade acadêmica de graduação, que raramente tem seus
@@ -69,13 +79,14 @@
 						primeira de muitas e que vocês encontrem aqui um ambiente de
 						representatividade.
 					</p>
-					<p class=" grey--text text--lighten-4">
-						Por fim, deixamos registrado o agradecimento à Assessoria de
-						Comunicação da UFCG, que nos ajudou a divulgar o projeto, elevando o
-						número de respondentes a níveis aceitáveis. Agradecemos também aos
-						CAs e às diversas coordenações, que repassaram nosso formulário aos
-						estudantes, e aos prórios alunos, que tiveram a boa vontade de
-						opinar. Sem vocês nada teria sido possível.
+					<p class="">
+						Por fim, deixamos registrado o agradecimento à
+						<strong>Assessoria de Comunicação</strong> da UFCG, que nos ajudou a
+						divulgar o projeto, elevando o número de respondentes a níveis
+						aceitáveis. Agradecemos também aos CAs e às diversas coordenações,
+						que repassaram nosso formulário aos estudantes, e aos prórios
+						alunos, que tiveram a boa vontade de opinar. Sem vocês nada teria
+						sido possível.
 					</p>
 				</div>
 			</div>
@@ -84,7 +95,7 @@
 		<!-- <v-btn>Github</v-btn> -->
 
 		<PerfilRespondentes />
-		<VagasOfertadas />
+		<VagasOfertadas id="sobreRae" />
 		<CursarDisciplina />
 		<OpiniaoRAE />
 		<DesempenhoRAE />
@@ -100,6 +111,9 @@
 		<VolumeAtividades />
 		<JulgaVolumeAtividades />
 		<SobreInstituicao />
+		<AvaliaUFCGPandemia />
+		<AvaliaDesempenhoCoord />
+		<Metodologia />
 	</v-card>
 </template>
 
@@ -121,10 +135,16 @@ import AtendimentoProfessores from "./pages/SobreProfessores/AtendimentoProfesso
 import VolumeAtividades from "./pages/SobreProfessores/VolumeAtividades";
 import JulgaVolumeAtividades from "./pages/SobreProfessores/JulgaVolumeAtividades";
 import SobreInstituicao from "./pages/SobreInstituicao/SobreInstituicao";
+import AvaliaUFCGPandemia from "./pages/SobreInstituicao/AvaliaUFCGPandemia";
+import AvaliaDesempenhoCoord from "./pages/SobreInstituicao/AvaliaDesempenhoCoord";
+import Metodologia from "./pages/Metodologia&Informacoes";
 
 export default {
 	name: "Content",
 	components: {
+		Metodologia,
+		AvaliaDesempenhoCoord,
+		AvaliaUFCGPandemia,
 		SobreInstituicao,
 		JulgaVolumeAtividades,
 		VolumeAtividades,
@@ -154,7 +174,6 @@ export default {
 	margin: 100px 0px 0px 0px;
 }
 .titlePage {
-	margin-top: 200px;
 	font-size: 27px;
 	max-width: 500px;
 	text-align: start;
@@ -178,9 +197,10 @@ export default {
 }
 
 .textGraphs {
+	box-sizing: border-box;
 	margin-top: 50px;
 	width: 85%;
-	max-height: 520px;
+	/* max-height: 520px; */
 	/* -webkit-column-count: 2; */
 	column-count: 2;
 	grid-column-gap: 20px;
@@ -200,6 +220,11 @@ export default {
 }
 
 strong {
-	color: #eead2d;
+	color: #eead2d !important;
+}
+
+.outLink {
+	text-decoration: none;
+	color: #77db48 !important;
 }
 </style>
