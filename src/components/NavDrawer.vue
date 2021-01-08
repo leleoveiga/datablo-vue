@@ -45,6 +45,7 @@ export default {
 						name: "Quantidade de respostas",
 						id: "quantidadeRespostas",
 						child: true,
+						offs: 40,
 					},
 				],
 			},
@@ -56,41 +57,49 @@ export default {
 						name: "Vagas Ofertadas",
 						id: "vagasOfertadas",
 						child: true,
+						offs: 40,
 					},
 					{
 						name: "Disciplinas Cursadas",
 						id: "cursarDisciplina",
 						child: true,
+						offs: 40,
 					},
 					{
 						name: "Opinião Geral",
 						id: "opiniaoRae",
 						child: true,
+						offs: 40,
 					},
 					{
 						name: "Desempenho no RAE",
 						id: "desempenhoRae",
 						child: true,
+						offs: 40,
 					},
 					{
 						name: "Qualidade do Ensino",
 						id: "qualidadeRae",
 						child: true,
+						offs: 40,
 					},
 					{
 						name: "Saúde Mental",
 						id: "saudeMentalRae",
 						child: true,
+						offs: 40,
 					},
 					{
 						name: "Dificuldades Técnicas",
 						id: "dificuldadesTecnicas",
 						child: true,
+						offs: 40,
 					},
 					{
 						name: "Impacto das Dificuldades",
 						id: "dificuldadesDesempenho",
 						child: true,
+						offs: 40,
 					},
 				],
 			},
@@ -164,6 +173,7 @@ export default {
 	}),
 	methods: {
 		scrollTo(id, offs) {
+			console.log("oisaidhs");
 			this.$vuetify.goTo(`#${id}`, {
 				duration: 400,
 				offset: offs ? offs : 0,
