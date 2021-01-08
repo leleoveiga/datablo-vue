@@ -13,8 +13,9 @@
 			target="_blank"
 			text
 		>
+			<v-icon class="mr-2">mdi-github</v-icon>
 			<span class="mr-2">github</span>
-			<v-icon>mdi-open-in-new</v-icon>
+			<!-- <v-icon>mdi-open-in-new</v-icon> -->
 		</v-btn>
 	</v-app-bar>
 </template>
