@@ -47,8 +47,12 @@
 				graduação da UFCG a respeito do Regime Acadêmico Extraordinário - RAE
 			</p>
 			<!-- <div class="d-flex justify-start"> -->
-			<v-btn class="px-10 mb-16" color="#eead2dcc">Metodologia</v-btn>
-			<div class="presentation">
+			<!-- <v-btn
+				class="px-10 mb-16"
+				color="#eead2dcc"
+				>Metodologia</v-btn
+			> -->
+			<div class="presentation" id="overview">
 				<div class="text">
 					<p class="">
 						Ao longo do Regime Acadêmico Extraordinário (RAE) da UFCG, ouvimos
@@ -91,35 +95,38 @@
 				</div>
 			</div>
 		</div>
-		<!-- </div> -->
-		<!-- <v-btn>Github</v-btn> -->
 
-		<PerfilRespondentes />
-		<VagasOfertadas id="sobreRae" />
-		<CursarDisciplina />
-		<OpiniaoRAE />
-		<DesempenhoRAE />
-		<QualidadeRAE />
-		<SaudeMental />
-		<DificuldadesTecnicas />
-		<DificuldadesDesempenho />
-		<SobreProfessores />
-		<ProfessoresTolerantes />
-		<AtuacaoProfessores />
-		<AtendimentoProfessores />
-		<ExigenciaProfessores />
-		<VolumeAtividades />
-		<JulgaVolumeAtividades />
-		<SobreInstituicao />
-		<AvaliaUFCGPandemia />
-		<AvaliaDesempenhoCoord />
-		<Metodologia />
+		<PerfilRespondentes id="perfilRespondente" />
+
+		<SobreRae id="sobreRae" />
+		<VagasOfertadas id="vagasOfertadas" />
+		<CursarDisciplina id="cursarDisciplina" />
+		<OpiniaoRAE id="opiniaoRae" />
+		<DesempenhoRAE id="desempenhoRae" />
+		<QualidadeRAE id="qualidadeRae" />
+		<SaudeMental id="saudeMentalRae" />
+		<DificuldadesTecnicas id="dificuldadesTecnicas" />
+		<DificuldadesDesempenho id="dificuldadesDesempenho" />
+
+		<SobreProfessores id="sobreProfessores" />
+		<ToleranciaProfessores id="toleranciaProfessores" />
+		<AtuacaoProfessores id="atuacaoProfessores" />
+		<AtendimentoProfessores id="atendimentoProfessores" />
+		<ExigenciaProfessores id="exigenciaProfessores" />
+		<VolumeAtividades id="volumeAtividades" />
+		<JulgaVolumeAtividades id="julgaVolumeAtividades" />
+
+		<SobreInstituicao id="sobreInstituicao" />
+		<AvaliaUFCGPandemia id="avaliaUFCGPandemia" />
+		<AvaliaDesempenhoCoord id="avaliaDesempenhoCoord" />
+		<Metodologia id="metodologia" />
 	</v-card>
 </template>
 
 <script>
 import PerfilRespondentes from "./pages/PerfilRespondentes";
 import VagasOfertadas from "./pages/SobreRae/VagasOfertadas.vue";
+import SobreRae from "./pages/SobreRae/SobreRae.vue";
 import CursarDisciplina from "./pages/SobreRae/CursarDisciplina.vue";
 import OpiniaoRAE from "./pages/SobreRae/OpiniaoRAE.vue";
 import DesempenhoRAE from "./pages/SobreRae/DesempenhoRAE.vue";
@@ -128,7 +135,7 @@ import SaudeMental from "./pages/SobreRae/SaudeMental.vue";
 import DificuldadesDesempenho from "./pages/SobreRae/DificuldadesDesempenho.vue";
 import DificuldadesTecnicas from "./pages/SobreRae/DificuldadesTecnicas.vue";
 import SobreProfessores from "./pages/SobreProfessores/SobreProfessores";
-import ProfessoresTolerantes from "./pages/SobreProfessores/ProfessoresTolerantes";
+import ToleranciaProfessores from "./pages/SobreProfessores/ProfessoresTolerantes";
 import AtuacaoProfessores from "./pages/SobreProfessores/AtuacaoProfessores";
 import ExigenciaProfessores from "./pages/SobreProfessores/ExigenciaProfessores";
 import AtendimentoProfessores from "./pages/SobreProfessores/AtendimentoProfessores";
@@ -151,7 +158,7 @@ export default {
 		AtendimentoProfessores,
 		ExigenciaProfessores,
 		AtuacaoProfessores,
-		ProfessoresTolerantes,
+		ToleranciaProfessores,
 		SobreProfessores,
 		DificuldadesTecnicas,
 		DificuldadesDesempenho,
@@ -160,6 +167,7 @@ export default {
 		DesempenhoRAE,
 		OpiniaoRAE,
 		CursarDisciplina,
+		SobreRae,
 		PerfilRespondentes,
 		VagasOfertadas,
 	},
