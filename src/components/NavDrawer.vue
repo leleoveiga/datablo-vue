@@ -9,9 +9,7 @@
 		width="375px"
 	>
 		<v-treeview
-			v-model="tree"
 			:items="items"
-			item-key="name"
 			activatable
 			color="#eead2d"
 			expand-icon=""
@@ -19,13 +17,14 @@
 			open-on-click
 		>
 			<template v-slot:label="{ item }">
-				<span
+				<div
 					v-bind:class="{ childrenFont: item.child }"
 					class="navFont grey--text text--lighten-4 font-weight-regular"
+					style="padding: 11px 0px"
 					@click="scrollTo(item.id, item.offs)"
 				>
 					{{ item.name }}
-				</span>
+				</div>
 			</template>
 		</v-treeview>
 	</v-navigation-drawer>
@@ -173,12 +172,14 @@ export default {
 	}),
 	methods: {
 		scrollTo(id, offs) {
-			console.log("oisaidhs");
+			// console.log("click");
 			this.$vuetify.goTo(`#${id}`, {
-				duration: 400,
+				duration: 500,
 				offset: offs ? offs : 0,
 				easing: "easeOutCubic",
 			});
+			// var elmnt = document.getElementById(id);
+			// elmnt.scrollIntoView({ behavior: "smooth" });
 		},
 	},
 };
