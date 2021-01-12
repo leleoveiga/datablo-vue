@@ -1,39 +1,55 @@
 <template>
-	<v-navigation-drawer
-		class="pt-8"
-		permanent
-		app
-		clipped
-		right
-		color="#1c1f23"
-		width="375px"
-	>
-		<v-treeview
-			:items="items"
-			activatable
-			color="#eead2d"
-			expand-icon=""
-			transition
-			open-on-click
+	<div>
+		<v-btn
+			fixed
+			right
+			class="mt-16 mx-2"
+			fab
+			dark
+			color="teal"
+			@click="menu = !menu"
 		>
-			<template v-slot:label="{ item }">
-				<div
-					v-bind:class="{ childrenFont: item.child }"
-					class="navFont grey--text text--lighten-4 font-weight-regular"
-					style="padding: 11px 0px"
-					@click="scrollTo(item.id, item.offs)"
-				>
-					{{ item.name }}
-				</div>
-			</template>
-		</v-treeview>
-	</v-navigation-drawer>
+			<v-icon dark>
+				mdi-format-list-bulleted-square
+			</v-icon>
+		</v-btn>
+		<v-navigation-drawer
+			v-if="isMenuVisible(1000)"
+			class="pt-8"
+			app
+			clipped
+			right
+			color="#1c1f23"
+			width="375px"
+		>
+			<v-treeview
+				:items="items"
+				activatable
+				color="#eead2d"
+				expand-icon=""
+				transition
+				open-on-click
+			>
+				<template v-slot:label="{ item }">
+					<div
+						v-bind:class="{ childrenFont: item.child }"
+						class="navFont grey--text text--lighten-4 font-weight-regular"
+						style="padding: 11px 0px"
+						@click="scrollTo(item.id, item.offs)"
+					>
+						{{ item.name }}
+					</div>
+				</template>
+			</v-treeview>
+		</v-navigation-drawer>
+	</div>
 </template>
 
 <script>
 export default {
 	name: "NavDrawer",
 	data: () => ({
+		menu: false,
 		items: [
 			{ name: "Overview", id: "overview", offs: 100 },
 			{
@@ -180,6 +196,22 @@ export default {
 			});
 			// var elmnt = document.getElementById(id);
 			// elmnt.scrollIntoView({ behavior: "smooth" });
+		},
+		isSmallerThan(value) {
+			if (this.$vuetify.breakpoint.width < value) {
+				// this.toggleMenu();
+				console.log("a tela eh pequena");
+				return true;
+			}
+			return false;
+		},
+		isMenuVisible(value) {
+			if (this.menu) return true;
+			else if (this.isSmallerThan(value)) {
+				return true;
+			} else {
+				return false;
+			}
 		},
 	},
 };
