@@ -1,7 +1,7 @@
 <template>
 	<v-card class="marginGraph" width="90%" dark>
 		<div
-			class="font-weight-bold body-1 d-flex align-center justify-center mt-10"
+			class="px-10 font-weight-bold body-1 d-flex align-center justify-center mt-10"
 		>
 			Na sua opinião, os professores são tolerantes com imprevistos que
 			impossibilitem a realização de atividades?

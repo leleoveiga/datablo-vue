@@ -1,7 +1,7 @@
 <template>
 	<v-card class="mt-10" width="90%" dark>
 		<div
-			class="font-weight-bold body-1 d-flex align-center justify-center mt-10"
+			class="px-10 font-weight-bold body-1 d-flex align-center justify-center mt-10"
 		>
 			Como você avalia o desempenho da coordenação do seu curso no atendimento e
 			suporte aos estudantes no RAE?
