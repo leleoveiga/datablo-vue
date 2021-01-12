@@ -14,7 +14,7 @@
 			</v-icon>
 		</v-btn>
 		<v-navigation-drawer
-			v-show="isMenuVisible(1000)"
+			v-model="menu"
 			class="pt-8"
 			app
 			clipped
@@ -188,7 +188,6 @@ export default {
 	}),
 	methods: {
 		scrollTo(id, offs) {
-			// console.log("click");
 			this.$vuetify.goTo(`#${id}`, {
 				duration: 500,
 				offset: offs ? offs : 0,
@@ -197,25 +196,25 @@ export default {
 			// var elmnt = document.getElementById(id);
 			// elmnt.scrollIntoView({ behavior: "smooth" });
 		},
-		isSmallerThan(value) {
-			if (this.$vuetify.breakpoint.width < value) {
-				// this.toggleMenu();
-				console.log("a tela eh pequena");
-				return true;
-			} else {
-				return false;
-			}
-		},
-		isMenuVisible(value) {
-			if (this.menu) {
-				console.log("menu eh true");
-				return true;
-			} else if (this.isSmallerThan(value)) {
-				return false;
-			} else {
-				return true;
-			}
-		},
+		// isSmallerThan(value) {
+		// 	if (this.$vuetify.breakpoint.width < value) {
+		// 		// this.toggleMenu();
+		// 		return true;
+		// 	} else {
+		// 		return false;
+		// 	}
+		// },
+		// isMenuVisible(value) {
+		// 	if (this.menu) {
+		// 		console.log("menu eh true");
+		// 		return true;
+		// 	} else if (this.isSmallerThan(value)) {
+		// 		console.log("a tela eh pequena");
+		// 		return false;
+		// 	} else {
+		// 		return true;
+		// 	}
+		// },
 	},
 };
 </script>
