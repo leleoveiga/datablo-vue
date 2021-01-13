@@ -9,9 +9,7 @@
 			color="teal"
 			@click="menu = !menu"
 		>
-			<v-icon dark>
-				mdi-format-list-bulleted-square
-			</v-icon>
+			<v-icon dark> mdi-format-list-bulleted-square </v-icon>
 		</v-btn>
 		<v-navigation-drawer
 			v-model="menu"
@@ -22,6 +20,18 @@
 			color="#1c1f23"
 			width="375px"
 		>
+			<v-btn
+				fixed
+				small
+				right
+				class="drawerBtn"
+				fab
+				dark
+				color="transparent"
+				@click="menu = !menu"
+			>
+				<v-icon dark> mdi-close </v-icon>
+			</v-btn>
 			<v-treeview
 				:items="items"
 				activatable
@@ -227,5 +237,9 @@ export default {
 .childrenFont {
 	font-family: "Roboto Slab", serif;
 	font-size: 16px;
+}
+.drawerBtn {
+	margin-right: 310px;
+	margin-top: -25px;
 }
 </style>
