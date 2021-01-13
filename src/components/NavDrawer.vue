@@ -59,7 +59,7 @@
 export default {
 	name: "NavDrawer",
 	data: () => ({
-		menu: false,
+		menu: undefined,
 		items: [
 			{ name: "Overview", id: "overview", offs: 100 },
 			{
@@ -206,14 +206,14 @@ export default {
 			// var elmnt = document.getElementById(id);
 			// elmnt.scrollIntoView({ behavior: "smooth" });
 		},
-		// isSmallerThan(value) {
-		// 	if (this.$vuetify.breakpoint.width < value) {
-		// 		// this.toggleMenu();
-		// 		return true;
-		// 	} else {
-		// 		return false;
-		// 	}
-		// },
+		isSmallerThan(value) {
+			if (this.$vuetify.breakpoint.width < value) {
+				// this.toggleMenu();
+				return true;
+			} else {
+				return false;
+			}
+		},
 		// isMenuVisible(value) {
 		// 	if (this.menu) {
 		// 		console.log("menu eh true");
@@ -225,6 +225,9 @@ export default {
 		// 		return true;
 		// 	}
 		// },
+	},
+	mounted: function () {
+		this.menu = !this.isSmallerThan(1264);
 	},
 };
 </script>
