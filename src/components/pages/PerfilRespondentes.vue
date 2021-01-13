@@ -22,7 +22,7 @@
 		<!-- card dos gráficos -->
 		<v-card class="marginGraph" width="90%" dark id="quantidadeRespostas">
 			<div
-				class="font-weight-bold body-1 d-flex align-center justify-center mt-10"
+				class="px-10 font-weight-bold body-1 d-flex align-center justify-center mt-10"
 			>
 				Quantidade de Respondentes
 			</div>

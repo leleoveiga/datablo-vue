@@ -1,39 +1,65 @@
 <template>
-	<v-navigation-drawer
-		class="pt-8"
-		permanent
-		app
-		clipped
-		right
-		color="#1c1f23"
-		width="375px"
-	>
-		<v-treeview
-			:items="items"
-			activatable
-			color="#eead2d"
-			expand-icon=""
-			transition
-			open-on-click
+	<div>
+		<v-btn
+			fixed
+			right
+			class="mt-16 mx-2"
+			fab
+			dark
+			color="teal"
+			@click="menu = !menu"
 		>
-			<template v-slot:label="{ item }">
-				<div
-					v-bind:class="{ childrenFont: item.child }"
-					class="navFont grey--text text--lighten-4 font-weight-regular"
-					style="padding: 11px 0px"
-					@click="scrollTo(item.id, item.offs)"
-				>
-					{{ item.name }}
-				</div>
-			</template>
-		</v-treeview>
-	</v-navigation-drawer>
+			<v-icon dark> mdi-format-list-bulleted-square </v-icon>
+		</v-btn>
+		<v-navigation-drawer
+			v-model="menu"
+			class="pt-8"
+			app
+			clipped
+			right
+			color="#1c1f23"
+			width="375px"
+		>
+			<v-btn
+				fixed
+				small
+				right
+				class="drawerBtn"
+				fab
+				dark
+				color="transparent"
+				@click="menu = !menu"
+			>
+				<v-icon dark> mdi-close </v-icon>
+			</v-btn>
+			<v-treeview
+				:items="items"
+				activatable
+				color="#eead2d"
+				expand-icon=""
+				transition
+				open-on-click
+			>
+				<template v-slot:label="{ item }">
+					<div
+						v-bind:class="{ childrenFont: item.child }"
+						class="navFont grey--text text--lighten-4 font-weight-regular"
+						style="padding: 11px 0px"
+						@click="scrollTo(item.id, item.offs)"
+					>
+						{{ item.name }}
+					</div>
+				</template>
+			</v-treeview>
+		</v-navigation-drawer>
+	</div>
 </template>
 
 <script>
 export default {
 	name: "NavDrawer",
 	data: () => ({
+		menu: undefined,
 		items: [
 			{ name: "Overview", id: "overview", offs: 100 },
 			{
@@ -172,7 +198,6 @@ export default {
 	}),
 	methods: {
 		scrollTo(id, offs) {
-			// console.log("click");
 			this.$vuetify.goTo(`#${id}`, {
 				duration: 500,
 				offset: offs ? offs : 0,
@@ -181,6 +206,28 @@ export default {
 			// var elmnt = document.getElementById(id);
 			// elmnt.scrollIntoView({ behavior: "smooth" });
 		},
+		isSmallerThan(value) {
+			if (this.$vuetify.breakpoint.width < value) {
+				// this.toggleMenu();
+				return true;
+			} else {
+				return false;
+			}
+		},
+		// isMenuVisible(value) {
+		// 	if (this.menu) {
+		// 		console.log("menu eh true");
+		// 		return true;
+		// 	} else if (this.isSmallerThan(value)) {
+		// 		console.log("a tela eh pequena");
+		// 		return false;
+		// 	} else {
+		// 		return true;
+		// 	}
+		// },
+	},
+	mounted: function () {
+		this.menu = !this.isSmallerThan(1264);
 	},
 };
 </script>
@@ -193,5 +240,9 @@ export default {
 .childrenFont {
 	font-family: "Roboto Slab", serif;
 	font-size: 16px;
+}
+.drawerBtn {
+	margin-right: 310px;
+	margin-top: -25px;
 }
 </style>
