@@ -3,7 +3,7 @@
 		<v-btn
 			fixed
 			right
-			class="mt-16 mx-2"
+			class="mt-5 mx-2"
 			fab
 			dark
 			color="teal"
