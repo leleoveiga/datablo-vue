@@ -27,8 +27,9 @@
 				right
 				class="drawerBtn"
 				fab
+				outlined
 				dark
-				color="transparent"
+				color="grey"
 				@click="menu = !menu"
 			>
 				<v-icon dark> mdi-close </v-icon>
