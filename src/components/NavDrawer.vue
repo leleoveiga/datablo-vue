@@ -21,6 +21,7 @@
 			width="375px"
 		>
 			<v-btn
+				v-show="isSmallerThan(1264)"
 				fixed
 				small
 				right
