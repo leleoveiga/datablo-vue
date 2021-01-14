@@ -26,7 +26,7 @@
 			>
 				Quantidade de Respondentes
 			</div>
-			<div class="d-flex align-center justify-center mt-10">
+			<div class="d-flex flex-wrap align-center justify-center mt-10">
 				<v-btn
 					class="mx-3"
 					color="#eead2dcc"
